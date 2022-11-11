@@ -1220,7 +1220,7 @@ Using a `connection_string`:
 
 ```dvc
 $ dvc remote add -d myremote azure://mycontainer/object
-$ dvc remote modify --local myremote connection_string 'mysecret'
+$ dvc remote modify --local myremote connection_string '<sasconnectionstring>'
 $ dvc push
 ```
 
@@ -1228,8 +1228,8 @@ Using `account_key`:
 
 ```dvc
 $ dvc remote add -d myremote azure://mycontainer/object
-$ dvc remote modify --local myremote account_name 'myaccount'
-$ dvc remote modify --local myremote account_key 'mysecret'
+$ dvc remote modify --local myremote account_name '<myaccount>'
+$ dvc remote modify --local myremote account_key '<mysecret>'
 $ dvc push
 ```
 
@@ -1237,7 +1237,7 @@ Using `sas_token`:
 
 ```dvc
 $ dvc remote add -d myremote azure://mycontainer/object
-$ dvc remote modify --local myremote account_name 'myaccount'
-$ dvc remote modify --local myremote sas_token 'mysecret'
+$ dvc remote modify --local myremote account_name '<myaccount>'
+$ dvc remote modify --local myremote sas_token '<mysecret>'
 $ dvc push
 ```
